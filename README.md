@@ -1,5 +1,22 @@
 # SASRec: Self-Attentive Sequential Recommendation
 
+## What I've done so far
+1. Verified code works and reproduced results of ml-1m.
+2. Created a result postprocessing script to analyze the avg ndcg@10 and avg hit@10
+
+## What I discovered
+1. validation **(not test)** set results for ml-1m matched paper's results... 
+2. the difference in our results and theirs when looking at our validation set results is 0.01... This could be due to hardware difference of how multithreading works on mac vs linux. Results could be variable. The hyperparameters given in the github could be different from the hyper parameters when the authors were writing the paper.
+
+## TODO
+1. Reproduce results (Check)
+2. Hyper parameter tune to get closer results on test set
+3. use different dataset
+4. blah blah blah
+
+
+
+## The paper itself
 This is our TensorFlow implementation for the paper:
 
 [Wang-Cheng Kang](http://kwc-oliver.com), [Julian McAuley](http://cseweb.ucsd.edu/~jmcauley/) (2018). *[Self-Attentive Sequential Recommendation.](https://cseweb.ucsd.edu/~jmcauley/pdfs/icdm18.pdf)* In Proceedings of IEEE International Conference on Data Mining (ICDM'18)
