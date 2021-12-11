@@ -8,4 +8,4 @@ maxlen,200
 num_blocks,2
 num_epochs,201
 num_heads,1
-train_dir,default
+train_dir,defualt
