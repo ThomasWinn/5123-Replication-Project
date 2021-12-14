@@ -1,23 +1,28 @@
-# SASRec: Self-Attentive Sequential Recommendation
+# SASRec: Self-Attentive Sequential Recommendation Replication 
+Authors: Thomas Nguyen, Hughdan Liu
 
 ## What I've done so far
 1. Verified code works and reproduced results of ml-1m.
 2. Created a result postprocessing script to analyze the avg ndcg@10 and avg hit@10
 3. reproduced results on a second dataset (46 hours... MacBook dead)
+4. Increased Maxlen on the ML-1m to see how doubling the length of memory sequence in 
+this time series problem affects long term accuracy. Increased dropout rate to 0.3 because with more memory, we should turn off some neurons during training to prevent outlier results.
 
 ## What I discovered
 1. validation **(not test)** set results for ml-1m matched paper's results... Same with Beauty set
 2. the difference in our results and theirs when looking at our validation set results is 0.01... This could be due to hardware difference of how multithreading works on mac vs linux. Results could be variable. The hyperparameters given in the github could be different from the hyper parameters when the authors were writing the paper.
+3. maxlen = 400, dropout 0.3 increases results slightly (avg test/valid +0.20)
 
 ## WE HAVE
 1. C Level Project so far!! AYYYYY
 
 ## TODO
 1. Reproduce results (Check)
-2. Hyper parameter tune to get closer results on test set
-3. use different dataset
-4. blah blah blah
-5. I think I could reverse engineer the system archtievture and talk about it, but will do that after exam!
+2. Hyper parameter tune to get closer results on test set (check)
+3. use different dataset (need to get a script and understand how ML-1M is being parsed) 
+4. Adding new script for incorporating a new dataset. This is non trivial and counts as a point in the B-Level requirment
+5. According to professor, Reverse Engineering = if your not getting the results in the paper, understand how it's done in the paper and reimplement something in the code
+that may affect the outcome of the results. (Do-able)
 
 
 
