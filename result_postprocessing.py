@@ -1,4 +1,4 @@
-to_analyze = 'ml-1m_results (3.84hrs)/log.txt'
+to_analyze = 'Goodread_Results (9.96hrs)/log.txt'
 ndcg10_valid = []
 hit10_valid = []
 ndcg10_test = []
